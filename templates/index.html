@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Binance Predictor 🔷</title>
+    
+    <!-- Enhanced Favicon Support -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <meta name="theme-color" content="#4299E1">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AI-Powered Crypto Trading Assistant - Get real-time predictions for cryptocurrency pairs">
+    <meta name="keywords" content="crypto, trading, AI, predictions, binance, bitcoin, ethereum">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Binance Predictor 🔷">
+    <meta property="og:description" content="AI-Powered Crypto Trading Assistant">
+    <meta property="og:image" content="{{ url_for('static', filename='og-image.png') }}">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bot-blue': '#4299E1',
+                        'bot-light-blue': '#63B3ED',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 640px) {
+            .container { padding-left: 1rem; padding-right: 1rem; }
+        }
+        .smooth-scroll { scroll-behavior: smooth; }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-white to-blue-50 min-h-screen smooth-scroll tap-highlight-none">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="text-center mb-12 md:mb-16">
+            <div class="inline-block animate-float mb-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-4">
+                    Binance Predictor <span class="text-bot-blue">🔷</span>
+                </h1>
+            </div>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Your AI-Powered Crypto Trading Assistant
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto">
+            <!-- Bot Status Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-12 transform hover:scale-[1.02] transition-all duration-300 ease-in-out">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-20 h-20 md:w-24 md:h-24 bg-bot-blue rounded-full flex items-center justify-center shadow-lg animate-float">
+                        <span class="text-3xl md:text-4xl">🤖</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="flex items-center justify-center space-x-2 mb-4">
+                        <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+                        <h2 class="text-xl md:text-2xl font-semibold text-gray-800">Bot Online</h2>
+                    </div>
+                    <a href="https://t.me/binancepredictorbot" 
+                       class="inline-flex items-center justify-center px-6 py-3 bg-bot-blue text-white font-medium rounded-xl hover:bg-bot-light-blue transition-colors duration-200 shadow-md hover:shadow-lg active:transform active:scale-95">
+                        Start Trading →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-bot-blue mb-4 text-2xl">📊</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Real-time Predictions</h3>
+                    <p class="text-gray-600">Get instant price predictions powered by advanced AI algorithms</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-bot-blue mb-4 text-2xl">⚡</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Fast & Reliable</h3>
+                    <p class="text-gray-600">Quick responses with high-accuracy trading signals</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-bot-blue mb-4 text-2xl">🎯</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Multiple Timeframes</h3>
+                    <p class="text-gray-600">Analysis for different trading intervals</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-bot-blue mb-4 text-2xl">🔒</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Secure & Private</h3>
+                    <p class="text-gray-600">Your trading data stays private and secure</p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Start Trading Smarter Today</h2>
+                <p class="text-gray-600 mb-6 max-w-xl mx-auto">Join thousands of traders using AI-powered predictions</p>
+                <div class="inline-flex items-center justify-center space-x-4">
+                    <a href="https://t.me/binancepredictorbot" 
+                       class="px-8 py-3 bg-bot-blue text-white font-medium rounded-xl hover:bg-bot-light-blue transition-all duration-200 shadow-md hover:shadow-lg active:transform active:scale-95">
+                        Open in Telegram
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-gray-600">
+            <p class="text-sm md:text-base">© 2024 Binance Predictor Bot. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 
